@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.bsu.cs.wikipedia.revisionParserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-06T21:00:50" hostname="LIZZIE" time="0.011">
+<testsuite name="edu.bsu.cs.wikipedia.revisionParserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-06T21:21:26" hostname="LIZZIE" time="0.014">
   <properties/>
-  <testcase name="testParse()" classname="edu.bsu.cs.wikipedia.revisionParserTest" time="0.011"/>
+  <testcase name="testParse()" classname="edu.bsu.cs.wikipedia.revisionParserTest" time="0.014"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

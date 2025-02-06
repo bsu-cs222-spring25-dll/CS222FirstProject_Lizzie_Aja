@@ -14,22 +14,27 @@ public class ReadJsonFromFileTest {
 
     @Test
     public void testAccessToJsonFile() throws IOException {
-        String jsonData = readSampleFileAsString();
+        String jsonData = readwikiTestFileAsString();
         Assertions.assertNotNull(jsonData);
     }
 
     @Test
     public void testCountRevisionsWithJsonPath() throws IOException {
-        String jsonData = readSampleFileAsString();
-        JSONArray revisions = getRevisionsFromJson(jsonData);
-        Assertions.assertEquals(4, revisions.size());
+        String jsonData = readwikiTestFileAsString();
+        JSONArray wikiRevisions = getRevisionsFromJson(jsonData);
+        Assertions.assertEquals(4, wikiRevisions.size());
     }
 
-    private String readSampleFileAsString() throws NullPointerException, IOException {
+    private String readwikiTestFileAsString() throws NullPointerException, IOException {
         try (InputStream sampleFile = Thread.currentThread().getContextClassLoader()
                 .getResourceAsStream("wikiTest.json")) {
             return new String(Objects.requireNonNull(sampleFile).readAllBytes(), Charset.defaultCharset());
+        } catch (IOException e) {
+            System.err.print("Input not Found");
+        } catch (NullPointerException e){
+            System.err.println("File Not Found");
         }
+        return null;
     }
 
     private JSONArray getRevisionsFromJson(String jsonData) {

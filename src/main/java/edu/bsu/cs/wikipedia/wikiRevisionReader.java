@@ -18,12 +18,12 @@ public class wikiRevisionReader {
             String timeStamp = revisionReader.getLatestRevisionOf(line);
             System.out.println(timeStamp);
         } catch (IOException ioException) {
-            System.err.println("Network Connection Problems: " + ioException.getMessage());
+            System.err.println("File Not Found" + ioException.getMessage());
         }
     }
 
     private String getLatestRevisionOf(String articleTitle) throws IOException {
-        String urlString = String.format("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=%s&rvprop=timestamp&rvlimit=1", articleTitle);
+        String urlString = String.format("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=", articleTitle);
         String encodedURLString = URLEncoder.encode(urlString, Charset.defaultCharset());
         try {
             URL url = new URL(encodedURLString);
