@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.bsu.cs.wikipedia.ReadJsonFromFileTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-06T15:05:23" hostname="LIZZIE" time="0.008">
+<testsuite name="edu.bsu.cs.wikipedia.ReadJsonFromFileTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-06T17:12:20" hostname="LIZZIE" time="0.095">
   <properties/>
-  <testcase name="testAccessToJsonFile()" classname="edu.bsu.cs.wikipedia.ReadJsonFromFileTest" time="0.003"/>
-  <testcase name="testCountRevisionsWithJsonPath()" classname="edu.bsu.cs.wikipedia.ReadJsonFromFileTest" time="0.003"/>
+  <testcase name="testAccessToJsonFile()" classname="edu.bsu.cs.wikipedia.ReadJsonFromFileTest" time="0.024"/>
+  <testcase name="testCountRevisionsWithJsonPath()" classname="edu.bsu.cs.wikipedia.ReadJsonFromFileTest" time="0.067"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
