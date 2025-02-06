@@ -27,7 +27,7 @@ public class ReadJsonFromFileTest {
 
     private String readSampleFileAsString() throws NullPointerException, IOException {
         try (InputStream sampleFile = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("sample.json")) {
+                .getResourceAsStream("wikiTest.json")) {
             return new String(Objects.requireNonNull(sampleFile).readAllBytes(), Charset.defaultCharset());
         }
     }
