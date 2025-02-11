@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.bsu.cs.wikipedia.ReadJsonFromFileTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-06T21:21:25" hostname="LIZZIE" time="0.153">
-  <properties/>
-  <testcase name="testAccessToJsonFile()" classname="edu.bsu.cs.wikipedia.ReadJsonFromFileTest" time="0.04"/>
-  <testcase name="testCountRevisionsWithJsonPath()" classname="edu.bsu.cs.wikipedia.ReadJsonFromFileTest" time="0.106"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

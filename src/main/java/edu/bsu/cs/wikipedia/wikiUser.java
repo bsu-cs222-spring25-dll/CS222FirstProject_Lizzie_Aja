@@ -5,21 +5,29 @@ import java.util.Scanner;
 
 public class wikiUser {
 
-    public void findWikiUser(){
+    String wikiUserInput;
+
+    public String getWikiUser(){
+        return wikiUserInput;
+    }
+
+    public void setWikiUser(String wikiUser){
+        this.wikiUserInput = wikiUser;
+    }
+
+    public wikiUser(){
+        this.wikiUserInput = wikiUserInput;
+    }
+
+    public void researchWikiArticle(){
+        System.out.println("Enter desired topic to see recent updates");
+    }
+
+    public String takeWikiUserInput() {
+        researchWikiArticle();
         Scanner scan = new Scanner(System.in);
-        System.out.println("Input a User: ");
-        String wikiUserInput = scan.nextLine();
+        wikiUserInput = scan.nextLine();
+        return wikiUserInput;
     }
-    public void wikiUserList(){
-        ArrayList<String> wikiUserArrayList = new ArrayList<>();
-        wikiUserArrayList.add("Steel1943");
-        wikiUserArrayList.add("ClaudineChionh");
-        wikiUserArrayList.add("49.229.101.30");
-
-    }
-    public void compareWikiUser(){
-
-    }
-
 
 }

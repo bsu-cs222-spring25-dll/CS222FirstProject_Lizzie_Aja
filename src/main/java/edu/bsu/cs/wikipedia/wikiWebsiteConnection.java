@@ -6,7 +6,7 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
 
-public class WikipediaConnectionDemo {
+public class wikiWebsiteConnection {
 
     public static void main(String[] args) throws IOException {
         URLConnection connection = connectToWikipedia();
@@ -14,14 +14,16 @@ public class WikipediaConnectionDemo {
         printRawJson(jsonData);
     }
 
-    private static URLConnection connectToWikipedia() throws IOException {
-        String encodedUrlString = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=" +
-                URLEncoder.encode("Zappa", Charset.defaultCharset()) +
-                "&rvprop=timestamp|user&rvlimit=4&redirects";
+    public static String getEncodedURL(String wikiName){
+        return "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=" +
+        URLEncoder.encode(wikiName, Charset.defaultCharset()) + "&rvprop=timestamp|user&rvlimit=4&redirects";
+    }
+    private static URLConnection connectToWikipedia(String wikiName) throws IOException {
+        String encodedUrlString = getEncodedURL(wikiName);
         URL url = new URL(encodedUrlString);
         URLConnection connection = url.openConnection();
         connection.setRequestProperty("User-Agent",
-                "CS222FirstProject/0.1 (dllargent@bsu.edu)");
+                "CS222FirstProject/0.1 (elizabeth.collin2@bsu.edu)");
         connection.connect();
         return connection;
     }
