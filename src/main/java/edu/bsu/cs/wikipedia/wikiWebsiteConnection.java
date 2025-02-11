@@ -12,12 +12,6 @@ import static edu.bsu.cs.wikipedia.wikiRevisionParser.extractRevisions;
 
 public class wikiWebsiteConnection {
 
-//    public static void main(String[] args) throws IOException {
-//        URLConnection connection = connectToWikipedia();
-//        String jsonData = readJsonAsStringFrom(connection);
-//        printRawJson(jsonData);
-//    }
-
     //inspired by Dominick Smith and Christopher Vojkufka
     public JSONArray fetchWikiRevisions(String wikiName) throws IOException{
         URLConnection connection = connectToWikipedia(wikiName);
