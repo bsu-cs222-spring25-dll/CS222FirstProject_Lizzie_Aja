@@ -9,13 +9,14 @@ import java.net.URLEncoder;
 import java.nio.charset.Charset;
 
 import static edu.bsu.cs.wikipedia.wikiRevisionParser.extractRevisions;
+import static edu.bsu.cs.wikipedia.wikiRevisionParser.readJsonAsString;
 
 public class wikiWebsiteConnection {
 
     //inspired by Dominick Smith and Christopher Vojkufka
     public JSONArray fetchWikiRevisions(String wikiName) throws IOException{
         URLConnection connection = connectToWikipedia(wikiName);
-        String jsonData = readJsonAsStringFrom(connection);
+        String jsonData = readJsonAsString(connection);
         return extractRevisions(jsonData);
     }
 
