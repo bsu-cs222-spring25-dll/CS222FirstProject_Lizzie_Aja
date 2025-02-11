@@ -12,7 +12,16 @@ public class wikiRevisionParser {
         return wikiTimeStamp.getFirst().toString();
     }
     public String parseWikiUser(InputStream testDataStream) throws IOException {
-        JSONArray wikiUserName = (JSONArray) JsonPath.read(testDataStream, "$.. user");
+        JSONArray wikiUserName = (JSONArray) JsonPath.read(testDataStream, "$..user");
         return wikiUserName.getFirst().toString();
+    }
+
+    //inspired by Dominick Smith and Christopher Vojkufka
+    public static JSONArray extractRevisions(String jsonData){
+        if (jsonData.contains("redirects")){
+            String redirectedWikiArticle = JsonPath.read(jsonData, "$.query.redirects[0].to").toString();
+            System.out.println("Redirected to " + redirectedWikiArticle);
+        }
+        return JsonPath.read(jsonData, "$..revisions[*]");
     }
 }

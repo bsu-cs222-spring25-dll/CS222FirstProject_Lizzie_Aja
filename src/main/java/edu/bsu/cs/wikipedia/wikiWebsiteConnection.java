@@ -1,17 +1,28 @@
 package edu.bsu.cs.wikipedia;
 
+import net.minidev.json.JSONArray;
+
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
 
+import static edu.bsu.cs.wikipedia.wikiRevisionParser.extractRevisions;
+
 public class wikiWebsiteConnection {
 
-    public static void main(String[] args) throws IOException {
-        URLConnection connection = connectToWikipedia();
+//    public static void main(String[] args) throws IOException {
+//        URLConnection connection = connectToWikipedia();
+//        String jsonData = readJsonAsStringFrom(connection);
+//        printRawJson(jsonData);
+//    }
+
+    //inspired by Dominick Smith and Christopher Vojkufka
+    public JSONArray fetchWikiRevisions(String wikiName) throws IOException{
+        URLConnection connection = connectToWikipedia(wikiName);
         String jsonData = readJsonAsStringFrom(connection);
-        printRawJson(jsonData);
+        return extractRevisions(jsonData);
     }
 
     public static String getEncodedURL(String wikiName){

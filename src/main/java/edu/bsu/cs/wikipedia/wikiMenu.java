@@ -15,7 +15,7 @@ public class wikiMenu {
             System.err.println("No article name has been provided");
             System.exit(1);
         }
-        JSONArray revisions
+        //JSONArray revisions = websiteConnection.
 
 
     }
