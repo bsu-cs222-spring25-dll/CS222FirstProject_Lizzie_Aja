@@ -19,9 +19,7 @@ public class wikiRevisionParser {
     }
 
     //inspired by Dominick Smith and Christopher Vojkufka
-    public static String readJsonAsString(URLConnection urlConnection) throws IOException{
-        return new String(urlConnection.getInputStream().readAllBytes(), Charset.defaultCharset());
-    }
+
     public static JSONArray extractRevisions(String jsonData){
         if (jsonData.contains("redirects")){
             String redirectedWikiArticle = JsonPath.read(jsonData, "$.query.redirects[0].to").toString();

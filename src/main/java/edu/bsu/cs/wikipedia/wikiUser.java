@@ -20,7 +20,7 @@ public class wikiUser {
     }
 
     public void researchWikiArticle(){
-        System.out.println("Enter desired topic to see recent updates");
+        System.out.println("Enter a Wiki Article Name to get the most recent updates to the article.");
     }
 
     public String takeWikiUserInput() {
