@@ -1,18 +1,26 @@
 package edu.bsu.cs.wikipedia;
 
-import com.jayway.jsonpath.JsonPath;
-import net.minidev.json.JSONArray;
+import java.util.List;
 
 public class wikiFormatRevisions {
-    //inspired by Dominick Smith and Christopher Vojkufka (helped me use the replaceAll function)
-    public void formatRevisions(JSONArray revisions){
-        int count = 1;
-        int maxRevisions = Math.min(revisions.size(), 21);
-        for (int i = revisions.size() - 1; i >= revisions.size() - maxRevisions; i--) {
-            String time = JsonPath.read(revisions.get(i), "$..timestamp").toString().replaceAll("[\\[\\]\"]", " ");
-            String user = JsonPath.read(revisions.get(i), "$..user").toString().replaceAll("[\\[\\]\"]", " ");
-            System.out.print(count + " " + time + " " + user + "\n");
-            count++;
+    //inspired by Nolan Meyer and Dakota Coughlin
+    public String printRevisionList(List<Revision> revisionList){
+
+        int lineNumber = 1;
+
+        StringBuilder output = new StringBuilder();
+
+        for(Revision revision:revisionList){
+            output.append(String.format("%d  %s",lineNumber,formatOutput(revision)));
+            lineNumber++;
         }
+
+        return output.toString();
     }
+
+    protected String formatOutput(Revision revision){
+        return String.format("%s  %s\n",revision.timeStamp,revision.name);
+    }
+
+
 }
