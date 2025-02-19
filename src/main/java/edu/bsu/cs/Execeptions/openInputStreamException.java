@@ -1,4 +1,4 @@
-package edu.bsu.cs.wikipedia.Execeptions;
+package edu.bsu.cs.Execeptions;
 
 public class openInputStreamException extends Exception {
     public openInputStreamException(){

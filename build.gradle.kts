@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("application")
+    id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
 group = "edu.bsu.cs.wikipedia"
@@ -23,5 +24,10 @@ tasks.test {
 }
 
 application {
-    mainClass.set("edu.bsu.cs.wikipedia.WikipediaConnectionDemo")
+    mainClass.set("edu.bsu.cs.wikipedia.wikiGUI")
+}
+
+javafx {
+    version = "23.0.2"
+    modules = listOf("javafx.controls", "javafx.fxml")
 }
