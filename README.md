@@ -1,7 +1,7 @@
 # Wikipedia Data Fetcher
 ## Project Summary:
 
-This project catches and displays data of a Wikipedia article history using the program Java. It gets data from the “wikiWebsiteConnection”,"wikiFormatRevisions", "wikiMenu","wikiRevisionParser", "wikiUser", & "wikiWebsiteConnection", processes it using JSONPAth and the data proceeds to run by using the “main” class. The data is displayed in test run box, passing all tests and being able to type the articles name and proceeds to print out timestamps of the article. 
+This project catches and displays data of a Wikipedia article history using the program Java. It gets data from the “wikiWebsiteConnection”,"wikiFormatRevisions", "wikiMenu","wikiRevisionParser", "wikiUser", & "wikiWebsiteConnection", processes it using JSONPAth and the data proceeds to run by using the “main” class. The data is displayed in test run box, passing all tests and being able to type the articles name and proceeds to print out timestamps of the article, also ended making a GUI menu by implementing JavaFX, providing a more humanly description option. 
 
 ## Authors:
 - **Aja Moore**
